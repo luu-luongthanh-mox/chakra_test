@@ -1,12 +1,15 @@
 import Head from "next/head";
 import { Center, Container, Input } from "@chakra-ui/react";
 
-import styles from "../styles/Home.module.css";
-import DynamicText from "../components/DynamicText";
+import styles from "styles/Home.module.css";
+import DynamicText from "components/DynamicText";
+import { useRef } from "react";
 
 const Home = () => {
+  const textRef = useRef<any>();
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
+    textRef?.current?.updateText(e.target.value);
   };
 
   return (
@@ -16,8 +19,8 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container width="auto" centerContent>
-        <DynamicText />
+      <Container maxW="container.sm" centerContent>
+        <DynamicText ref={textRef} />
         <Input onChange={onChange} />
       </Container>
     </Center>
