@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { Center, Container, Input } from "@chakra-ui/react";
+
 import styles from "../styles/Home.module.css";
 import DynamicText from "../components/DynamicText";
 
@@ -8,17 +10,17 @@ const Home = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <Center h="100vh" flexDirection="column">
       <Head>
         <title>Coding Test</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <Container width="auto" centerContent>
         <DynamicText />
-        <input onChange={onChange} />
-      </main>
-    </div>
+        <Input onChange={onChange} />
+      </Container>
+    </Center>
   );
 };
 
