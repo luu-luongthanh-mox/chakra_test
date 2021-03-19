@@ -21,8 +21,8 @@ function Blogs() {
   return (
     <Container maxW="container.lg" mt="5">
       <Wrap>
-        {blogs.map((item) => (
-          <WrapItem blog={item}>
+        {blogs.map((item, index) => (
+          <WrapItem blog={item} key={index}>
             <CardBlog blog={item} />
           </WrapItem>
         ))}

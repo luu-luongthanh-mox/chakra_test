@@ -7,9 +7,9 @@ import { Header } from "components/Header";
 import "../styles/globals.css";
 // Configure Firebase.
 const config = {
-  apiKey: "AIzaSyBdZTzv4wXQ33UWpw32xtKlM7tiDmqXFow",
-  authDomain: "manga-firestore.firebaseapp.com",
-  projectId: "manga-firestore",
+  apiKey: "AIzaSyCIjkMO2yjYGsItTwdEuX5R_6OwLOMssIk",
+  authDomain: "manga-water.firebaseapp.com",
+  projectId: "manga-water",
   // ...
 };
 if (firebase.apps.length === 0) {
