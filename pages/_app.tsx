@@ -10,11 +10,9 @@ const config = {
   apiKey: "AIzaSyCIjkMO2yjYGsItTwdEuX5R_6OwLOMssIk",
   authDomain: "manga-water.firebaseapp.com",
   projectId: "manga-water",
-  // ...
 };
 if (firebase.apps.length === 0) {
   firebase.initializeApp(config);
-  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
 }
 
 console.log(firebase);
